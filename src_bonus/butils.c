@@ -34,6 +34,11 @@ void	find_ents(t_sl *sl)
 				sl->px = j;
 				sl->py = i;
 			}
+			else if (sl->map[i][j] == 'E')
+			{
+				sl->ex = j;
+				sl->ey = i;
+			}
 			j++;
 		}
 		i++;

@@ -6,7 +6,7 @@
 # include <unistd.h>
 # include "mlx.h"
 
-# define SCALE 64
+# define SCALE 32
 # define TITLE "so_long"
 
 # define ESC 53
@@ -20,17 +20,18 @@ typedef struct s_sprite
 	void	*player;
 	void	*player1;
 	void	*player2;
-	void	*player3;
-	void	*player4;
 	void	*coin;
 	void	*coin1;
 	void	*coin2;
 	void	*coin3;
+	void	*coin4;
+	void	*enemy;
+	void	*enemy1;
+	void	*enemy2;
 	void	*wall;
 	void	*tile;
 	void	*exit;
-	void	*exit1;
-	void	*exit2;
+	void	*exiton;
 }	t_sprite;
 
 typedef struct s_sl
@@ -56,12 +57,21 @@ typedef struct s_sl
 	t_sprite	*res;
 }	t_sl;
 
+//ENEMY
+void	random_move_order(t_sl *sl);
+
+//SPRITE
+void	renew_coll(t_sl *sl);
+void	renew_player(t_sl *sl);
+void	renew_enemy(t_sl *sl);
+
 //RENDER
 int		render(t_sl *sl);
 
 //DRAW
 void	draw_map(t_sl *sl);
 void	draw_player(t_sl *sl);
+void	draw_enemy(t_sl *sl);
 void	draw_data(t_sl *sl);
 
 //INIT.c

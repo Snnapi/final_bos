@@ -23,15 +23,13 @@ int	free_so_long(t_sl *sl)
 	free(sl->map);
 	mlx_destroy_image(sl->mlx, sl->res->player1);
 	mlx_destroy_image(sl->mlx, sl->res->player2);
-	mlx_destroy_image(sl->mlx, sl->res->player3);
-	mlx_destroy_image(sl->mlx, sl->res->player4);
 	mlx_destroy_image(sl->mlx, sl->res->wall);
 	mlx_destroy_image(sl->mlx, sl->res->coin1);
 	mlx_destroy_image(sl->mlx, sl->res->coin2);
 	mlx_destroy_image(sl->mlx, sl->res->coin3);
+	mlx_destroy_image(sl->mlx, sl->res->coin4);
 	mlx_destroy_image(sl->mlx, sl->res->tile);
-	mlx_destroy_image(sl->mlx, sl->res->exit1);
-	mlx_destroy_image(sl->mlx, sl->res->exit2);
+	mlx_destroy_image(sl->mlx, sl->res->exiton);
 	mlx_destroy_window(sl->mlx, sl->win);
 	free(sl->res);
 	free(sl);

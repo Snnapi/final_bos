@@ -15,14 +15,18 @@ static t_sprite	*sprite_init(t_sl *game)
 	int			y;
 
 	sprite = (t_sprite *) malloc(sizeof(t_sprite));
-	sprite->wall = mlx_xpm_file_to_image(game->mlx, "res/wall.xpm", &x, &y);
-	sprite->exit = mlx_xpm_file_to_image(game->mlx, "res/exit.xpm", &x, &y);
-	sprite->tile = mlx_xpm_file_to_image(game->mlx, "res_bonus/tile.xpm", &x, &y);
-	sprite->coin = mlx_xpm_file_to_image(game->mlx, "res_bonus/coin_b1.xpm", &x, &y);
-	sprite->coin1 = mlx_xpm_file_to_image(game->mlx, "res_bonus/coin_b1.xpm", &x, &y);
-	sprite->coin2 = mlx_xpm_file_to_image(game->mlx, "res_bonus/coin_b2.xpm", &x, &y);
-	sprite->coin3 = mlx_xpm_file_to_image(game->mlx, "res_bonus/coin_b3.xpm", &x, &y);
-	sprite->player = mlx_xpm_file_to_image(game->mlx, "res/player.xpm", &x, &y);
+	sprite->wall = mlx_xpm_file_to_image(game->mlx, "res_bonus/wall.xpm", &x, &y);
+	sprite->exit = mlx_xpm_file_to_image(game->mlx, "res_bonus/exitof.xpm", &x, &y);
+	sprite->exiton = mlx_xpm_file_to_image(game->mlx, "res_bonus/exiton.xpm", &x, &y);
+	sprite->tile = mlx_xpm_file_to_image(game->mlx, "res_bonus/back.xpm", &x, &y);
+	sprite->coin1 = mlx_xpm_file_to_image(game->mlx, "res_bonus/collectible1.xpm", &x, &y);
+	sprite->coin2 = mlx_xpm_file_to_image(game->mlx, "res_bonus/collectible2.xpm", &x, &y);
+	sprite->coin3 = mlx_xpm_file_to_image(game->mlx, "res_bonus/collectible3.xpm", &x, &y);
+	sprite->coin4 = mlx_xpm_file_to_image(game->mlx, "res_bonus/collectible4.xpm", &x, &y);
+	sprite->player1 = mlx_xpm_file_to_image(game->mlx, "res_bonus/player_front1.xpm", &x, &y);
+	sprite->player2 = mlx_xpm_file_to_image(game->mlx, "res_bonus/player_front2.xpm", &x, &y);
+	sprite->enemy1 = mlx_xpm_file_to_image(game->mlx, "res_bonus/patrol1.xpm", &x, &y);
+	sprite->enemy2 = mlx_xpm_file_to_image(game->mlx, "res_bonus/patrol2.xpm", &x, &y);
 	return (sprite);
 }
 

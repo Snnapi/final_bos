@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-static char	*put_line(char *buffer, int y, int *bf)
+static char	*put_line(char *buffer, int *bf)
 {
 	char	*line;
 	int		buffer_index;
@@ -34,16 +34,6 @@ static char	*put_line(char *buffer, int y, int *bf)
 	while (index < line_length)
 		line[index++] = buffer[buffer_index++];
 	line[index] = '\0';
-	return (line);
-}
-
-static int	count_line(char *buffer)
-{
-	int	line;
-
-	line = 0;
-	while (buffer[line] && buffer[line] != '\n')
-		line++;
 	return (line);
 }
 
@@ -77,7 +67,7 @@ static char	**map_builder(char *buffer, int size, t_sl *sl)
 	map = (char **) malloc(sizeof(char *) * enter);
 	while (index < enter)
 	{
-		map[index] = put_line(buffer, index, &bf);
+		map[index] = put_line(buffer, &bf);
 		index++;
 	}
 	return (map);
